@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Stories</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.cdnfonts.com/css/tasa-orbiter-display" rel="stylesheet">        
+</head>
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#space">Space</a>
+  <a href="#earth">Earth</a>
+  <a href="#climate">Climate</a>
+  <a href="#cities">Cities</a>
+  <a href="#life">Life</a>
+  <a href="#about">About</a>
+</nav>
+
+<section id="home">
+  <div class="content">
+  
+    <h1>From Data to Stories</h1>
+    <h1></h1>
+    <p>My personal approach in turning open data into clear, compelling visual narratives*.<br>
+    <span style="font-style: italic;">*projects published in "La Lettura", a supplement of the Italian newspaper "Corriere della Sera".</span>
+    </p>
+  </div>
+
+    <!-- Scroll-down arrow -->
+    <a href="#space" class="scroll-down">
+      <span class="arrow"></span>
+    </a>
+</section>
+
+<section id="space" class="section">
+  <div class="intro">
+    <h2>The asteroids around us</h2>
+    <h4>
+      This visualization compares data on asteroids that have come 
+      close to Earth with confirmed impact sites in the official Earth Impact Database. 
+      The analysis highlights the frequency 
+      and distance of recent close encounters and the geological signatures left by past impacts.
+    </h4>
+  </div>
+  
+   <div class="full-image">
+    <img src="images/space1.svg" alt="Space full image">
+  </div>
+
+<div>  
+  <div class="content">
+    <h3>
+      Methodology
+    </h3>
+    <p>
+      For this project 
+      I sourced open data from the Minor Planet Center (IAU) and the Earth Impact Database. 
+      The Earth Impact Database required cleaning and reformatting, particularly adjusting 
+      the coordinates to a consistent format suitable for mapping.
+      I then imported the cleaned dataset into QGIS, where I visualized the locations and 
+      relative sizes of impact sites on Earth. 
+    </p>
+    <p>
+      For the near-Earth asteroid graphic, I first created the base visualization in R Studio 
+      to capture its irregular shape, then refined colors, typography, and overall design in Illustrator 
+      to produce a polished final graphic.
+      This workflow ensured both accuracy in the scientific data and clarity in the visual presentation, 
+      combining data processing, spatial analysis, and graphic design.
+    </p>
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/space2-0.png" alt="Space image 1" class="mySlides">
+          <img src="images/space2.png" alt="Space image 1" class="mySlides">
+          <img src="images/space3.png" alt="Space image 2" class="mySlides">
+          <img src="images/space4.png" alt="Space image 3" class="mySlides">
+        </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</div>
+</section>  
+
+<section id="earth" class="section">
+  <div class="intro">
+    <h2>Volcanic activity from 1900 until today</h2>
+    <h4>
+         The visualization shows eruptions over time for each of the 46 volcanoes
+         still active in 2025. Each circle represents an eruption, with the start
+         and end indicated on a timeline starting in 1900. The size of the dots
+         indicates the intensity of the event according to the VEI index (Volcanic Explosivity Index), 
+         while the color highlights long-lasting or momentary eruptions. 
+         The elevation and geographical location of each volcano are also indicated.
+    </h4>
+  </div>
+  
+  <div class="full-image">
+    <img src="images/earth1.svg" alt="Earth full image">
+  </div>
+<div>  
+  <div class="content">
+    <h3>
+      Methodology
+    </h3>
+    <p>
+      For the Earth project on volcanoes, I worked with a large dataset from the Global Volcanism Program at the Smithsonian Institution. I downloaded data about all eruptions and filtered it to focus on the volcanoes that are currently active, also examining activity over the past 100 years. Due to the dataset’s size, I explored and processed it using R Studio, which I also used for the main visualizations. 
+    </p>
+    <p>
+      To create a detailed volcano chart showing elevation levels, I used RawGraphs Studio. Working with this open dataset was challenging because it was larger than the files I usually handle, required coding skills, and demanded careful understanding of the data, especially as I don’t have a formal background in data analysis.
+    </p>
+    <p>
+       was also super surprised by the results that there are so many active volcanoes currently 
+       erupting lava on Earth. If I hadn’t explored this data, I would never have known this, and 
+       I find it truly fascinating.
+    </p>
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/earth2.png" alt="Earth image 1" class="mySlides">
+          <img src="images/earth3.png" alt="Earth image 2" class="mySlides">
+          <img src="images/earth4.png" alt="Earth image 3" class="mySlides">
+        </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="climate" class="section">
+  <div class="intro">
+    <h2>Ten years of climate change</h2>
+    <h4>
+         The infographic illustrates climate change over 
+         the last 10 years in Italy's regional capitals, 
+         showing variations in average monthly temperatures 
+         and precipitation. It also highlights periods of 
+         drought or excess rainfall, comparing them with historical values.
+    </h4>
+  </div>
+  
+  <div class="full-image">
+    <img src="images/climate1.svg" alt="Climate full image">
+  </div>
+
+
+<div>  
+  <div class="content">
+    <h3>
+      Methodology
+    </h3>
+    <p>
+      For the Climate project, I analyzed weather changes in different regions of Italy over the last 10 years to explore the effects of global warming. Initially, I thought acquiring the data would be easy, but using APIs required coding skills I wasn’t confident with. I found a more accessible and reliable dataset through Power/NASA Earth Science Applied Science Program and combined it with regional data on droughts and water access from Osservatorio Siccità CNR IBE. Acquiring the data was challenging, despite its relevance and public importance, and processing it required careful attention to detail.
+    </p>
+    <p>
+      For the visualization, I used RawGraphs Studio to create clear and informative charts and refined the final presentation in Illustrator. It was important to me to present the data in a way that highlighted each detail while remaining easy to understand.
+    </p>
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/climate2.png" alt="Climate image 1" class="mySlides">
+          <img src="images/climate3.png" alt="Climatee image 2" class="mySlides">
+          <img src="images/climate4.png" alt="Climate image 3" class="mySlides">
+          <img src="images/climate5.png" alt="Climate image 2" class="mySlides">
+          <img src="images/climate6.png" alt="Climate image 3" class="mySlides">
+        </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="cities" class="section">
+  <div class="intro">
+    <h2>Metropolis and population</h2>
+    <h4>
+         The infographic illustrates the most populated cities in the world, comparing 
+         the population of the city proper with that of the wider urban area (hinterland). 
+         It also includes data on land area and population density, highlighting differences 
+         between urban centers and providing an overall picture of demographic distribution 
+         in the largest global metropolises.
+    </h4>
+
+  </div>
+  
+  <div class="full-image">
+    <img src="images/city1.svg" alt="Cities full image">
+  </div>
+
+<div>  
+  <div class="content">
+    <h3>
+      Methodology
+    </h3>
+    <p>
+      For the Cities project, I worked with a dataset from Wikipedia that compiled extensive information on the largest cities by population. The dataset included details such as population, urban area, city area, and density. My main focus was to show the relationship between the size of the living area and the number of people living there, while highlighting the contrast between urban and city areas and which one is more densely populated. 
+    </p>
+    <p>
+      I experimented with both the visual language and the positioning of the elements to make these differences clear. Through this process, I was fascinated to discover that it’s not only capitals that are highly populated and developed—density often depends less on available space and more on specific country characteristics.
+    </p>
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/city2.png" alt="City image 1" class="mySlides">
+          <img src="images/city3.png" alt="City image 2" class="mySlides">
+          <img src="images/city4.png" alt="City image 3" class="mySlides">
+        </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="life" class="section">
+  <div class="intro">
+    <h2>The quality of life in Europe</h2>
+    <h4>
+         The infographic analyzes various aspects of quality of life in cities 
+         across 34 European countries (both EU and non-EU). The quality of life 
+         index combines factors such as healthcare, safety, and climate, 
+         while the purchasing power index assesses spending power compared to New York.
+    </h4>
+    <h4>
+          The cost of living excludes rent, while the ratio of property prices 
+          to income reflects housing affordability. The indices for time spent 
+          in traffic, pollution, and climate analyze daily travel, the environment, 
+          and weather conditions, respectively. Finally, the healthcare index evaluates 
+          medical services, and the safety index records the level of crime and 
+          the perception of safety. The estimates are based on complex algorithms 
+          that use empirical formulas based on various parameters. The inputs are converted 
+          into a scale from 0 to 100.
+    </h4>
+  </div>
+  
+  <div class="full-image">
+    <img src="images/life1.svg" alt="Life full image">
+  </div>
+
+
+<div>  
+  <div class="content">
+    <h3>
+      Methodology
+    </h3>
+    <p>
+      For the Life graphic, I used data from Numbeo.com, which was straightforward to read and process. While the dataset was accessible, I wanted to avoid a banal presentation and sought a way to make the visualisation more engaging. Representing the data over all the years proved challenging, and the final visualisation required a significant amount of manual work to achieve the desired clarity and design. 
+    </p>
+  
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <img src="images/life2.png" alt="Life image 1" class="mySlides">
+          <img src="images/life3.png" alt="Life image 2" class="mySlides">
+          <img src="images/life4.png" alt="Life image 3" class="mySlides">
+          <img src="images/life5.png" alt="Life image 3" class="mySlides">
+        </div>
+      <button class="next">&#10095;</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="about" class="about">
+<div class="text">
+    <h3>
+      About
+    </h3>
+    <p>
+      I work at the intersection of data and storytelling, exploring how open data
+       can reveal insights that are often hidden in plain sight. My work focuses 
+       on turning raw datasets into meaningful narratives that help organizations, 
+       communities, and individuals make informed decisions. I am particularly drawn 
+       to open data because it is transparent, accessible, and allows anyone 
+       to engage with the world in a more informed way. 
+    </p>
+    <p>
+      Working with open data comes with unique challenges. Data quality, inconsistency,
+      and gaps are constant hurdles, and transforming complex datasets into something 
+      understandable and actionable requires both technical skill and creativity. 
+      I also navigate the balance between accuracy and clarity, making sure that the stories 
+      I present remain faithful to the data while being engaging for the audience. 
+    </p>
+    <p>
+      My goal is to contribute to a culture of transparency and curiosity. By leveraging 
+      open data, I aim to empower people to explore, question, and understand the world around 
+      them. I am always looking for ways to refine my methods, discover new sources, and build 
+      tools that make open data more usable, insightful, and impactful.
+    </p>
+  </div>
+  
+</section>
+
+
+
+
+
+<footer>
+  <p>Projects published in “La Lettura”, a supplement of the Italian newspaper “Corriere della Sera”.</p>
+  <p>&copy; 2025 Kosara Keskinova. All rights reserved.</p>
+</footer>
+
+
+
+<script>
+document.querySelectorAll(".carousel").forEach(carousel => {
+  let slideIndex = 0;
+  const slides = carousel.querySelectorAll("img"); // all images in this carousel
+  const prev = carousel.querySelector(".prev");
+  const next = carousel.querySelector(".next");
+
+  function showSlides(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+
+    slides.forEach((slide, index) => {
+      slide.style.display = index === slideIndex ? "block" : "none";
+    });
+  }
+
+  prev.addEventListener("click", () => {
+    showSlides(--slideIndex);
+  });
+
+  next.addEventListener("click", () => {
+    showSlides(++slideIndex);
+  });
+
+  // Initialize
+  showSlides(slideIndex);
+});
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80; // offset for nav height
+      const sectionHeight = section.clientHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+})
+</script>
+
+
+</body>
+</html>
