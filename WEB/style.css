@@ -1,0 +1,380 @@
+/* Reset & basic styles */
+
+body {
+    font-family: 'TASA Orbiter Display', sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #110064;
+    background-color: #FCFAF3;
+}
+
+html {
+  scroll-padding-top: 70px; /* matches the nav height */
+  scroll-behavior: smooth;
+}
+
+
+/* Scroll-down arrow outline */
+.scroll-down {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+}
+
+.scroll-down .arrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-left: 2px solid #110064;
+    border-bottom: 2px solid #110064;
+    transform: rotate(-45deg);
+    animation: bounce 1.5s infinite;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0) rotate(-45deg); }
+    40% { transform: translate(-50%, -8px) rotate(-45deg); }
+    60% { transform: translate(-50%, -4px) rotate(-45deg); }
+}
+
+
+/* Full screen intro section */
+#home {
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+  /* Background image */
+  background: url('images/bg.svg') center/cover no-repeat;
+  position: relative;
+  color: #110064;
+}
+
+/* Semi-transparent overlay */
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 250, 243, 0.7); /* white with 70% opacity */
+  z-index: 0; /* behind text */
+}
+
+#home .content {
+  position: relative;
+  z-index: 1; /* above overlay */
+}
+
+/* Fixed navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%; /* start from middle */
+  transform: translateX(-50%); /* truly center it */
+  background: white; /* background so it’s readable */
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 999; /* stays on top of other content */
+  font-weight: 700;
+}
+
+/* Optional styling for nav links */
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #110064;
+  text-transform: uppercase;
+}
+
+nav a.active {
+    color: #F94DBF; /* highlight active section */
+}
+
+h1 {
+    font-family: 'TASA Orbiter Display', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 68px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #110064;
+}
+
+h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 120%;
+    justify-content: center; /* vertical centering */
+    align-items: center; /* horizontal centering */
+    text-align: left;
+}
+
+h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: -12px;
+    justify-content: center; /* vertical centering */
+    align-items: center; /* horizontal centering */
+    text-align: left;
+}
+
+p{
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center; /* vertical centering */
+    align-items: center; /* horizontal centering */
+    text-align: left;
+}
+
+h4{
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    justify-content: center; /* vertical centering */
+    align-items: center; /* horizontal centering */
+    text-align: left;
+}
+
+
+
+.section {
+  position: relative;
+  height: 320vh; /* so you can scroll inside */
+  border-top: 1px solid #110064; /* subtle separation */
+  background: linear-gradient(to bottom, #f9d9e8 0%, #FCFAF3 5%);
+}
+
+.about {
+    background: linear-gradient(to bottom, #FCFAF3 0%, #f9d9e8 80%);
+    height: 80vh;
+    justify-content: center; /* vertical centering */
+    align-items: center; /* horizontal centering */
+}
+
+.about .text {
+    position: relative;
+    z-index: 0;
+    padding: 40px;
+    margin: 0 20%;
+    margin-bottom: -20px;
+    border-radius: 8px;
+    color: #110064;
+}
+
+.full-image {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section .intro {
+    position: relative;
+    z-index: 0;
+    padding: 40px;
+    margin: 0 20%;
+    margin-top: 5%;
+    margin-bottom: -40px;
+    border-radius: 8px;
+}
+
+.section .content {
+  position: relative;
+  z-index: 2; /* ensures text appears above the image */
+  background-color: rgba(250, 250, 250, 0.9); /* optional: adds readability */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.content {
+    margin: 0 20%; /* 20% horizontal margins */
+}
+
+.content img.legend {
+    display: block;        /* makes margin work cleanly */
+    max-width: 40%;        /* controls size — try 60% for smaller */
+    height: auto;          /* keeps proportions */
+    margin: 20px 0 80px 0; /* top, right, bottom, left */
+}
+
+/* Carousel container */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: #110064;
+  font-size: 30px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .carousel button {
+        font-size: 24px;
+        padding: 6px 10px;
+    }
+}
+
+
+
+
+
+footer {
+  background-color: #FCFAF3; /* same as body for subtlety */
+  color: #110064;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #110064; /* subtle separation */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    #home {
+        height: 80vh; /* slightly shorter on tablets */
+        padding: 15px;
+        background-size: cover; /* ensures the image covers section */
+    }
+
+    #home h1 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    #home h2 {
+        font-size: 20px;
+    }
+
+    #home .content {
+        margin: 0 10%; /* smaller margins */
+        padding: 15px;
+    }
+
+    .about .text,
+    .section .intro,
+    .content {
+        margin: 0 10%; /* smaller horizontal margins */
+        padding: 20px;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #home {
+        height: 70vh;
+        padding: 10px;
+        background-size: cover;
+    }
+
+    #home h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    #home h2 {
+        font-size: 18px;
+    }
+
+    #home .content {
+        margin: 0 5%; /* minimal side margins */
+        padding: 15px;
+    }
+
+    .about .text,
+    .section .intro,
+    .content {
+        margin: 0 5%;
+        padding: 15px;
+        font-size: 17px;
+        line-height: 150%;
+    }
+
+    nav {
+        padding: 8px 12px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center; /* center text on mobile for readability */
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .carousel button {
+        font-size: 20px;
+        padding: 5px 8px;
+    }
+}
