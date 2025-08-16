@@ -243,14 +243,6 @@ h4{
     margin: 20px 0 80px 0; /* top, right, bottom, left */
 }
 
-.spacer {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;  /* full width */
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-
 /* Carousel container */
 .carousel {
   position: relative;
@@ -404,6 +396,10 @@ footer p {
         padding: 15px;
     }
 
+    .section {
+      height: auto;
+    }
+
     .about .text,
     .section .intro,
     .content {
@@ -426,12 +422,17 @@ footer p {
         font-size: 14px;
     }
 
-    h1, h2, h3, h4 {
+    h1, h2, h3 {
         text-align: center; /* center text on mobile for readability */
     }
 
-    p {
+    h4, p {
         text-align: left;
+    }
+
+    .zoom-container  {
+      height: 60vh;
+      width: 100%;
     }
 
     .carousel button {
