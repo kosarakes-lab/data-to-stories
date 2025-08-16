@@ -21,11 +21,10 @@
 
 <section id="home">
   <div class="content">
-  
     <h1>From Data to Stories</h1>
     <h1></h1>
-    <p>My personal approach in turning open data into clear, compelling visual narratives*.<br>
-    <span style="font-style: italic;">*projects published in "La Lettura", a supplement of the Italian newspaper "Corriere della Sera".</span>
+    <p>personal approach in turning open data into clear, compelling visual narratives*.<br>
+    <span style="font-style: italic;">*projects published in "La lettura", a supplement of the Italian newspaper "Corriere della Sera".</span>
     </p>
   </div>
 
@@ -36,22 +35,22 @@
 </section>
 
 <section id="space" class="section">
-  <div class="intro">
-    <h2>The asteroids around us</h2>
-    <h4>
-      This visualization compares data on asteroids that have come 
-      close to Earth with confirmed impact sites in the official Earth Impact Database. 
-      The analysis highlights the frequency 
-      and distance of recent close encounters and the geological signatures left by past impacts.
-    </h4>
-  </div>
-  
-   <div class="full-image">
-    <img src="images/space1-0.svg" alt="Space full image">
-  </div>
 
+   <div class="full-image">
+    <img src="images/space1.svg" alt="Space full image">
+  </div>
 <div>  
   <div class="content">
+    <div>
+        <h2>The asteroids around us</h2>
+        <h4>
+          This visualization compares data on asteroids that have come 
+          close to Earth with confirmed impact sites in the official Earth Impact Database. 
+          The analysis highlights the frequency 
+          and distance of recent close encounters and the geological signatures left by past impacts.
+        </h4>
+    </div>
+
     <h3>
       Methodology
     </h3>
@@ -73,20 +72,38 @@
     <!-- Carousel -->
     <div class="carousel">
       <button class="prev">&#10094;</button>
-        <div class="carousel-images">
-          <img src="images/space2-0.png" alt="Space image 1" class="mySlides">
-          <img src="images/space2.png" alt="Space image 1" class="mySlides">
-          <img src="images/space3.png" alt="Space image 2" class="mySlides">
-          <img src="images/space4.png" alt="Space image 3" class="mySlides">
+      <div class="carousel-images">
+        <div class="slide">
+          <img src="images/space2.png" alt="Space image 1">
         </div>
+        <div class="slide">
+          <img src="images/space3.png" alt="Space image 2">
+        </div>
+        <div class="slide">
+          <img src="images/space4.png" alt="Space image 3">
+        </div>
+        <div class="slide">
+          <img src="images/space5.png" alt="Space image 4">
+        </div>
+      </div>
       <button class="next">&#10095;</button>
     </div>
-  </div>
+  </div> 
+    <div class="zoom-container"> <!--zoomimage-->
+      <img id="zoom-image" src="images/space1.svg" alt="Zoomable image">
+      <div id="zoom-lens"></div>
+    </div>
+   
 </div>
 </section>  
 
 <section id="earth" class="section">
-  <div class="intro">
+  <div class="full-image">
+    <img src="images/earth1.svg" alt="Earth full image">
+  </div>
+<div>  
+  <div class="content">
+    <div>
     <h2>Volcanic activity from 1900 until today</h2>
     <h4>
          The visualization shows eruptions over time for each of the 46 volcanoes
@@ -97,12 +114,6 @@
          The elevation and geographical location of each volcano are also indicated.
     </h4>
   </div>
-  
-  <div class="full-image">
-    <img src="images/earth1.svg" alt="Earth full image">
-  </div>
-<div>  
-  <div class="content">
     <h3>
       Methodology
     </h3>
@@ -120,19 +131,35 @@
     <!-- Carousel -->
     <div class="carousel">
       <button class="prev">&#10094;</button>
-        <div class="carousel-images">
-          <img src="images/earth2.png" alt="Earth image 1" class="mySlides">
-          <img src="images/earth3.png" alt="Earth image 2" class="mySlides">
-          <img src="images/earth4.png" alt="Earth image 3" class="mySlides">
+      <div class="carousel-images">
+        <div class="slide">
+          <img src="images/earth2.png" alt="Earth image 1">
         </div>
+        <div class="slide">
+          <img src="images/earth3.png" alt="Earth image 2">
+        </div>
+        <div class="slide">
+          <img src="images/earth4.png" alt="Earth image 3">
+        </div>
+      </div>
       <button class="next">&#10095;</button>
+    </div>
+  </div>
+   <div class="zoom-container"> <!--zoomimage-->
+      <img id="zoom-image" src="images/earth1.svg" alt="Zoomable image">
+      <div id="zoom-lens"></div>
     </div>
   </div>
 </div>
 </section>
 
 <section id="climate" class="section">
-  <div class="intro">
+  <div class="full-image">
+    <img src="images/climate1.svg" alt="Climate full image">
+  </div>
+<div>  
+  <div class="content">
+    <div>
     <h2>Ten years of climate change</h2>
     <h4>
          The infographic illustrates climate change over 
@@ -142,14 +169,6 @@
          drought or excess rainfall, comparing them with historical values.
     </h4>
   </div>
-  
-  <div class="full-image">
-    <img src="images/climate1.svg" alt="Climate full image">
-  </div>
-
-
-<div>  
-  <div class="content">
     <h3>
       Methodology
     </h3>
@@ -160,23 +179,37 @@
       For the visualization, I used RawGraphs Studio to create clear and informative charts and refined the final presentation in Illustrator. It was important to me to present the data in a way that highlighted each detail while remaining easy to understand.
     </p>
     <!-- Carousel -->
-    <div class="carousel">
+   <div class="carousel">
       <button class="prev">&#10094;</button>
-        <div class="carousel-images">
-          <img src="images/climate2.png" alt="Climate image 1" class="mySlides">
-          <img src="images/climate3.png" alt="Climatee image 2" class="mySlides">
-          <img src="images/climate4.png" alt="Climate image 3" class="mySlides">
-          <img src="images/climate5.png" alt="Climate image 2" class="mySlides">
-          <img src="images/climate6.png" alt="Climate image 3" class="mySlides">
+      <div class="carousel-images">
+        <div class="slide">
+          <img src="images/climate2.png" alt="Earth image 1">
         </div>
+        <div class="slide">
+          <img src="images/climate3.png" alt="Earth image 2">
+        </div>
+        <div class="slide">
+          <img src="images/climate4.png" alt="Earth image 3">
+        </div>
+      </div>
       <button class="next">&#10095;</button>
     </div>
   </div>
+   <div class="zoom-container"> <!--zoomimage-->
+      <img id="zoom-image" src="images/climate1.svg" alt="Zoomable image">
+      <div id="zoom-lens"></div>
+    </div>
 </div>
 </section>
 
-<section id="cities" class="section">
-  <div class="intro">
+<section id="cities" class="section">  
+  <div class="full-image">
+    <img src="images/city1.svg" alt="Cities full image">
+  </div>
+
+<div>  
+  <div class="content">
+    <div>
     <h2>Metropolis and population</h2>
     <h4>
          The infographic illustrates the most populated cities in the world, comparing 
@@ -187,13 +220,6 @@
     </h4>
 
   </div>
-  
-  <div class="full-image">
-    <img src="images/city1.svg" alt="Cities full image">
-  </div>
-
-<div>  
-  <div class="content">
     <h3>
       Methodology
     </h3>
@@ -205,21 +231,31 @@
     </p>
     <!-- Carousel -->
     <div class="carousel">
-      <button class="prev">&#10094;</button>
-        <div class="carousel-images">
-          <img src="images/city2.png" alt="City image 1" class="mySlides">
-          <img src="images/city3.png" alt="City image 2" class="mySlides">
-          <img src="images/city4.png" alt="City image 3" class="mySlides">
+      <div class="carousel-images">
+        <div class="slide">
+          <img src="images/city2.png" alt="City image 1">
         </div>
-      <button class="next">&#10095;</button>
+      </div>
     </div>
   </div>
+   <div class="zoom-container"> <!--zoomimage-->
+      <img id="zoom-image" src="images/city1.svg" alt="Zoomable image">
+      <div id="zoom-lens"></div>
+    </div>
 </div>
 </section>
 
 
 <section id="life" class="section">
-  <div class="intro">
+  
+  <div class="full-image">
+    <img src="images/life1.svg" alt="Life full image">
+  </div>
+
+
+<div>  
+  <div class="content">
+    <div class="intro">
     <h2>The quality of life in Europe</h2>
     <h4>
          The infographic analyzes various aspects of quality of life in cities 
@@ -238,14 +274,6 @@
           into a scale from 0 to 100.
     </h4>
   </div>
-  
-  <div class="full-image">
-    <img src="images/life1.svg" alt="Life full image">
-  </div>
-
-
-<div>  
-  <div class="content">
     <h3>
       Methodology
     </h3>
@@ -255,16 +283,17 @@
   
     <!-- Carousel -->
     <div class="carousel">
-      <button class="prev">&#10094;</button>
-        <div class="carousel-images">
-          <img src="images/life2.png" alt="Life image 1" class="mySlides">
-          <img src="images/life3.png" alt="Life image 2" class="mySlides">
-          <img src="images/life4.png" alt="Life image 3" class="mySlides">
-          <img src="images/life5.png" alt="Life image 3" class="mySlides">
+      <div class="carousel-images">
+        <div class="slide">
+          <img src="images/life2.png" alt="Earth image 1">
         </div>
-      <button class="next">&#10095;</button>
+      </div>
     </div>
   </div>
+   <div class="zoom-container"> <!--zoomimage-->
+      <img id="zoom-image" src="images/life1.svg" alt="Zoomable image">
+      <div id="zoom-lens"></div>
+    </div>
 </div>
 </section>
 
@@ -303,16 +332,16 @@
 
 
 <footer>
-  <p>Projects published in “La Lettura”, a supplement of the Italian newspaper “Corriere della Sera”.</p>
+  <p>Projects published in “La lettura”, a supplement of the Italian newspaper “Corriere della Sera”.</p>
   <p>&copy; 2025 Kosara Keskinova. All rights reserved.</p>
 </footer>
 
 
 
-<script>
+<script>//carousel
 document.querySelectorAll(".carousel").forEach(carousel => {
   let slideIndex = 0;
-  const slides = carousel.querySelectorAll("img"); // all images in this carousel
+  const slides = carousel.querySelectorAll(".slide"); // select whole slide blocks
   const prev = carousel.querySelector(".prev");
   const next = carousel.querySelector(".next");
 
@@ -338,7 +367,7 @@ document.querySelectorAll(".carousel").forEach(carousel => {
 });
 </script>
 
-<script>
+<script>//navigation
   document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll("nav a");
@@ -362,6 +391,24 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     });
   });
 })
+</script>
+
+<script>
+  document.querySelectorAll(".section").forEach(section => {
+    const img = section.querySelector(".full-image img");
+    if (!img) return;
+
+    window.addEventListener("scroll", () => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const scrollY = window.scrollY;
+
+      let progress = (scrollY - sectionTop) / sectionHeight;
+      progress = Math.min(Math.max(progress, 0), 1);
+
+      img.style.opacity = 1 - progress;
+    });
+  });
 </script>
 
 
