@@ -315,6 +315,27 @@ button:hover {
   right: 10px;
 }
 
+/* Default style for all links */
+a {
+  color: #110064;        /* link color */
+  text-decoration: none; /* removes underline */
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect */
+a:hover {
+  color: #F94DBF;             /* darker shade on hover */
+  border-bottom: 1px solid #F94DBF; /* underline animation */
+}
+
+/* If you want specific styles only inside paragraphs */
+p a {
+  font-style: italic;
+  border-bottom: 1px dotted #110064;
+}
+
+
 
 
 /* Mobile adjustments */
