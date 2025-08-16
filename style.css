@@ -400,6 +400,10 @@ footer p {
       height: auto;
     }
 
+    .about {
+    height: auto;
+    }
+
     .about .text,
     .section .intro,
     .content {
